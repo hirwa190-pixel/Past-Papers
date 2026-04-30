@@ -8,7 +8,386 @@
 </head>
 <body>
     <div id="main">
+         <!-- Navigation -->
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('about')">About</a>
+    <a href="#" onclick="showPage('contact')">Contact</a>
+    <a href="#" onclick="showPage('register')">Register</a>
+  </nav>
 
+  <!-- Pages -->
+  <section id="home">
+    <h1>Welcome</h1>
+  </section>
+
+  <section id="about">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #d9d9d9;
+    border-bottom: 1px solid #bbb;
+}
+
+.logo img {
+    width: 65px;
+}
+.home-link {
+    stroke: black;
+    stroke-width: 9000px;
+    color: #4CAF50;
+}
+.register-link {
+    stroke: black;
+    stroke-width: 9000px;
+    color: #4CAF50;
+}
+.mandate-link {
+    stroke: black;
+    stroke-width: 65%;
+    color: #4CAF50;
+}
+.contact-link {
+    stroke: black;
+    stroke-width: 9000px;
+    color: #4CAF50;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav li {
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+nav .active {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* HERO */
+.hero {
+    height: 280px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("assets/About_background.png") center/cover;
+    display: flex;
+    align-items: center;
+}
+
+.overlay {
+    padding: 40px 50px;
+    width: 100%;
+}
+
+.overlay h1 {
+    color: #7CFC00;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.overlay p {
+    color: white;
+    max-width: 650px;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* CONTENT */
+.content {
+    padding: 40px 50px;
+    max-width: 1000px;
+}
+
+.section {
+    margin-bottom: 35px;
+}
+
+.section h2 {
+    color: #4CAF50;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.section p {
+    margin: 12px 0;
+    line-height: 1.6;
+    font-size: 14px;
+    color: #333;
+}
+
+.section ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.section li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-size: 14px;
+    color: #333;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">
+        <img src="assets/past papers_logo.png">
+    </div>
+    <ul>
+        <li class="home-link">Home</li>
+        <li class="active">About Us</li>
+        <li class="mandate-link">Mandate</li>
+        <li class="register-link">Register</li>
+        <li class="contact-link">Contact</li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="overlay">
+        <h1>About Us</h1>
+        <p>Students waste hours searching for past papers, jumping between different websites, and still end up confused by unclear or missing answers. Studying takes time, frustrating, and inefficient.</p>
+        <p>We built this platform to fix that.</p>
+    </div>
+</section>
+
+<section class="content">
+
+    <div class="section">
+        <h2>What We Do</h2>
+        <ul>
+            <li>Access past papers by subject and year</li>
+            <li>Find clear, structured answers and explanations</li>
+            <li>Ask questions and get help when stuck</li>
+            <li>Study faster and more effectively</li>
+        </ul>
+        <p>Everything is designed to remove confusion and save time.</p>
+    </div>
+
+    <div class="section">
+        <h2>The Problem We Solve</h2>
+        <ul>
+            <li>Scattered resources across multiple sites</li>
+            <li>Lack of clear explanations</li>
+            <li>No support when stuck</li>
+            <li>Wasted time during revision</li>
+        </ul>
+        <p>This platform brings everything into one simple system.</p>
+    </div>
+
+    <div class="section">
+        <h2>Our Strengths</h2>
+        <p>To make exam preparation faster, cleaner, and accessible to every student by providing structured past papers and explanations.</p>
+    </div>
+
+    <div class="section">
+        <h2>When We Met</h2>
+        <p>Built for secondary school students preparing for national exams who want to study smarter and improve their results.</p>
+    </div>
+
+    <div class="section">
+        <h2>Our Vision</h2>
+        <ul>
+            <li>More subjects and exam content</li>
+            <li>Performance tracking tools</li>
+            <li>Mock exams and simulations</li>
+        </ul>
+        <p>We're building more than just a past papers website. Our goal is to create a smarter learning platform with:</p>
+        <ul>
+            <li>More subjects and exam content</li>
+            <li>Performance tracking tools</li>
+            <li>Mock exams and simulations</li>
+        </ul>
+        <p>A system where students don't just practice—they improve.</p>
+    </div>
+
+</section>
+  </section>
+
+  <section id="contact">
+    <!-- paste contact.html content here -->
+  </section>
+
+  <section id="register">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #e6e6e6;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #d9d9d9;
+    border-bottom: 1px solid #bbb;
+}
+
+.logo img {
+    width: 65px;
+}
+
+.home-link {
+    stroke: black;
+    stroke-width: 9000px;
+    color: #4CAF50;
+}
+.about-link {
+    stroke: black;
+    stroke-width: 9000px;
+    color: #4CAF50;
+}
+.mandate-link {
+    stroke: black;
+    stroke-width: 65%;
+    color: #4CAF50;
+}
+.contact-link {
+    stroke: black;
+    stroke-width: 9000px;
+    color: #4CAF50;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav li {
+    color: #333;
+    cursor: pointer;
+}
+
+nav .active {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* FORM BOX */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.form-box {
+    background: #dcdcdc;
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+}
+
+.form-box h2 {
+    margin-bottom: 20px;
+}
+
+.form-box label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 20px;
+    border: none;
+    background: #eee;
+}
+
+.form-box button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #8fb174;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-box p {
+    margin-top: 10px;
+}
+
+.form-box a {
+    color: green;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">
+        <img src="assets/past papers_logo.png">
+    </div>
+
+    <ul>
+        <li class="home-link">Home</li>
+        <li class="about-link">About Us</li>
+        <li class="mandate-link">Mandate</li>
+        <li class="active">Register</li>
+        <li class="contact-link">Contact</li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="form-box">
+        <h2>sign up</h2>
+
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name...">
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email...">
+
+        <label>Password:</label>
+        <input type="password" placeholder="Enter your Password...">
+
+        <button>Sign up</button>
+
+        <p>Already have an account ? <a href="#">login</a></p>
+    </div>
+</div>
+  </section>
     </div>
 
 </body>

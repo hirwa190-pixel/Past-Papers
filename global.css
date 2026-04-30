@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* Figma Variables */
+
+  /* Spacing */
+  --Radius-Full: 9999px;
+  --Space-200: 8px;
+  --Space-300: 12px;
+  --Space-400: 16px;
+  --Stroke-Border: 1px;
+
+  /* Common Style Variables */
+
+  /* Color */
+  --color-black: #000;
+  --color-darkgray: #b3b3b3;
+  --color-darkolivegreen: #285124;
+  --color-darkseagreen-100: #b7f0b1;
+  --color-darkseagreen-200: #9ed696;
+  --color-gainsboro: #d9d9d9;
+  --color-gray-100: #898989;
+  --color-gray-200: #020202;
+  --color-midnightblue: #091a72;
+  --color-white: #fff;
+  --color-whitesmoke: #ececec;
+  --Grey: #f3f3f3;
+
+  /* Gap */
+  --gap-5: 5px;
+  --gap-20: 20px;
+
+  /* Padding */
+  --padding-0: 0px;
+  --padding-1: 1px;
+  --padding-2: 2px;
+  --padding-16: 16px;
+  --padding-20: 20px;
+  --padding-28: 28px;
+  --padding-30: 30px;
+  --padding-60: 60px;
+  --padding-100: 100px;
+
+  /* BorderRadius */
+  --br-14: 14px;
+  --br-15: 15px;
+  --br-20: 20px;
+
+  /* Font */
+  --font-inria-serif: Inria Serif;
+  --font-inter: Inter;
+  --font-space-grotesk: Space Grotesk;
+
+  /* FontSize */
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-24: 24px;
+  --fs-32: 32px;
+
+  /* Shadows */
+  --shadow-drop: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --shadow-drop-1: 0px 4px 7px rgba(0, 0, 0, 0.25);
+  --text-shadow-1: 1px 0 0 rgba(0, 0, 0, 0.65), 0 1px 0 rgba(0, 0, 0, 0.65),
+    -1px 0 0 rgba(0, 0, 0, 0.65), 0 -1px 0 rgba(0, 0, 0, 0.65);
+
+  /* WidthHeights */
+  --height-16: 16px;
+  --height-28: 28px;
+  --width-16: 16px;
+  --width-71: 71px;
+
+  /* LineHeights */
+  --lh-28: 28px;
+
+  --left-0: 0px;
+  --top-0: 0px;
+}
