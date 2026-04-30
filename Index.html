@@ -383,12 +383,176 @@ nav .active {
         <input type="password" placeholder="Enter your Password...">
 
         <button>Sign up</button>
-
+       
         <p>Already have an account ? <a href="#">login</a></p>
     </div>
 </div>
   </section>
     </div>
+    <section>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f3f3f3;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  background: #e6e6e6;
+}
+
+/* LEFT LOGO */
+.logo img {
+  height: 45px;
+}
+
+/* CENTER MENU */
+.menu {
+  display: flex;
+  gap: 40px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #4caf50;
+  font-weight: bold;
+  white-space: nowrap; /* prevents "About Us" from breaking */
+}
+
+/* RIGHT SEARCH */
+.search input {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+/* LOGIN SECTION */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+.card {
+  background: #dcdcdc;
+  padding: 40px;
+  width: 420px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.card h1 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: #eee;
+}
+
+button {
+  margin-top: 20px;
+  width: 55%;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: #a5d6a7;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #81c784;
+}
+
+.signup {
+  margin-top: 15px;
+}
+
+.signup a {
+  color: green;
+  text-decoration: underline;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="assets/past papers_logo.png" alt="logo">
+  </div>
+
+  <!-- MENU -->
+  <div class="menu">
+    <a href="#">Home</a>
+    <a href="#">About Us</a>
+    <a href="#">Mandate</a>
+    <a href="#">Register</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <!-- SEARCH -->
+  <div class="search">
+    <input type="text" placeholder="Search">
+  </div>
+</nav>
+
+<!-- LOGIN -->
+<div class="container">
+  <div class="card">
+    <h1>Login</h1>
+
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" placeholder="Enter your name...">
+    </div>
+
+    <div class="form-group">
+      <label>Email:</label>
+      <input type="email" placeholder="Enter your email...">
+    </div>
+
+    <div class="form-group">
+      <label>Password:</label>
+      <input type="password" placeholder="Enter your Password...">
+    </div>
+
+    <button>Login</button>
+
+    <div class="signup">
+      Don’t have an account ? <a href="#">Sign up</a>
+    </div>
+  </div>
+</div>
+
+    </section>
 
 </body>
 </html>
