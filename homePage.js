@@ -15,6 +15,7 @@ const homePage = `
 
 <!-- HERO -->
 <section class="hero">
+<img src="assets/home_background.png">
     <div class="overlay">
         <h1>Welcome to Your Ultimate Study Hub</h1>
 
@@ -133,5 +134,100 @@ const homePage = `
 </footer>
 
 `;
+function loadHome() {
+    const app = document.getElementById("app");
+
+    // 🔥 Remove old styles
+    document.querySelectorAll(".page-style").forEach(s => s.remove());
+
+    app.innerHTML = "";
+
+    const div = document.createElement("div");
+    div.innerHTML = homePage;
+
+    // 🔹 CREATE STYLE
+    const style = document.createElement("style");
+    style.classList.add("page-style");
+
+    style.textContent = `
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #e6e6e6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 40px;
+            background: #d9d9d9;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .active {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .hero {
+            height: 250px;
+            background: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c") center/cover;
+            display: flex;
+            align-items: center;
+        }
+
+        .overlay {
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 30px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #7CFC00;
+        }
+
+        .features {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature-box {
+            background: white;
+            color: black;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background: green;
+            color: white;
+            padding: 20px;
+        }
+    `;
+
+    // 🔥 APPEND
+    document.head.appendChild(style);
+    app.appendChild(div);
+}
 
 export default homePage;

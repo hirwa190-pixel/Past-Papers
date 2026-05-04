@@ -14,6 +14,7 @@ const aboutPage = `
 
 <section class="hero">
     <div class="overlay">
+    <img src="assets/About_Background.png">
         <h1>About Us</h1>
         <p>
             Students waste hours searching for past papers, jumping between different websites,
@@ -62,3 +63,75 @@ const aboutPage = `
 `;
 
 export default aboutPage;
+
+function loadAbout() {
+    const app = document.getElementById("app");
+
+    // 🔥 Remove old styles
+    document.querySelectorAll(".page-style").forEach(s => s.remove());
+
+    app.innerHTML = "";
+
+    const div = document.createElement("div");
+    div.innerHTML = aboutPage;
+
+    const style = document.createElement("style");
+    style.classList.add("page-style");
+
+    style.textContent = `
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #e6e6e6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 40px;
+            background: #d9d9d9;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .active {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .hero {
+            height: 200px;
+            background: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c") center/cover;
+            display: flex;
+            align-items: center;
+        }
+
+        .overlay {
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 30px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #7CFC00;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+    `;
+
+    document.head.appendChild(style);
+    app.appendChild(div);
+}
+
+export default loadAbout;
