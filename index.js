@@ -1,5 +1,5 @@
-import { aboutPage } from "./about.js";
-import { registerPage } from "./register.js";
+import  aboutPage  from "./aboutPage.js";
+import registerPage from "./Registration.js";
 
 const app = document.getElementById("app");
 
@@ -45,6 +45,7 @@ document.head.appendChild(style);
 window.showPage = function(page) {
   if (page === "home") {
     app.innerHTML = "<h1 style='text-align:center'>Welcome</h1>";
+    console.log("home clicked");
   }
   else if (page === "about") {
     app.innerHTML = aboutPage();
