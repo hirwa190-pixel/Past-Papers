@@ -1,5 +1,5 @@
-import { loginForm } from "./login.js";
-import { signupForm } from "./signup.js";
+import loginForm  from "./login.js";
+import  signupForm  from "./signup.js";
 
 export function registerPage() {
   return `

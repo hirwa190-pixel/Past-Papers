@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Papers Review</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div id="main">
+         
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('about')">About</a>
+    <a href="#" onclick="showPage('contact')">Contact</a>
+    <a href="#" onclick="showPage('register')">Register</a>
+  </nav>
+
+
+  <section id="home">
+    <h1>Welcome</h1>
+  </section>
+
+  <section id="about">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #d9d9d9;
+    border-bottom: 1px solid #bbb;
+}
+
+.logo img {
+    width: 65px;
+}
+.home-link {
+    stroke: black;
+    stroke-width: 9000px;
+    color: #4CAF50;
+}
+.register-link {
+    stroke: black;
+    stroke-width: 9000px;
+    color: #4CAF50;
+}
+.mandate-link {
+    stroke: black;
+    stroke-width: 65%;
+    color: #4CAF50;
+}
+.contact-link {
+    stroke: black;
+    stroke-width: 9000px;
+    color: #4CAF50;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav li {
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+nav .active {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* HERO */
+.hero {
+    height: 280px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("assets/About_background.png") center/cover;
+    display: flex;
+    align-items: center;
+}
+
+.overlay {
+    padding: 40px 50px;
+    width: 100%;
+}
+
+.overlay h1 {
+    color: #7CFC00;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.overlay p {
+    color: white;
+    max-width: 650px;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* CONTENT */
+.content {
+    padding: 40px 50px;
+    max-width: 1000px;
+}
+
+.section {
+    margin-bottom: 35px;
+}
+
+.section h2 {
+    color: #4CAF50;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.section p {
+    margin: 12px 0;
+    line-height: 1.6;
+    font-size: 14px;
+    color: #333;
+}
+
+.section ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.section li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-size: 14px;
+    color: #333;
+}
+.desktop-5 {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: var(--padding-0) var(--padding-0) var(--padding-60);
+  box-sizing: border-box;
+  gap: 47px;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.frame-parent {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  gap: 4625px;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--fs-24);
+  color: var(--color-darkseagreen-100);
+  font-family: var(--font-inter);
+}
+.search,
+.search-wrapper {
+  flex-shrink: 0;
+  display: flex;
+}
+.search-wrapper {
+  margin-left: -4745px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 26px var(--padding-0) var(--padding-0);
+}
+.search {
+  width: 121px;
+  height: var(--height-28);
+  box-shadow: var(--shadow-drop);
+  border-radius: var(--Radius-Full);
+  background-color: var(--color-white);
+  border: var(--Stroke-Border) solid var(--color-gainsboro);
+  box-sizing: border-box;
+  overflow: hidden;
+  align-items: center;
+  padding: var(--Space-300) var(--Space-400);
+  gap: var(--Space-200);
+  min-width: 120px;
+}
+.search-icon,
+.value {
+  position: relative;
+  flex-shrink: 0;
+}
+.value {
+  width: calc(100% - 48px);
+  border: 0;
+  outline: 0;
+  font-family: var(--font-inter);
+  font-size: var(--fs-16);
+  background-color: transparent;
+  flex: 1;
+  line-height: 100%;
+  color: var(--color-darkgray);
+  text-align: left;
+  display: inline-block;
+}
+.search-icon {
+  height: var(--height-16);
+  width: var(--width-16);
+}
+.rectangle-parent {
+  width: 1440px;
+  box-shadow: var(--shadow-drop-1);
+  border-radius: var(--br-15);
+  background-color: var(--color-whitesmoke);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 3px 17px var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+  gap: var(--gap-20);
+  flex-shrink: 0;
+  max-width: 100%;
+}
+.frame-child,
+.frame-item {
+  position: relative;
+  flex-shrink: 0;
+}
+.frame-child {
+  height: 90px;
+  width: 1440px;
+  box-shadow: var(--shadow-drop-1);
+  border-radius: var(--br-15);
+  background-color: var(--color-whitesmoke);
+  display: none;
+  max-width: 100%;
+}
+.frame-item {
+  height: 87px;
+  width: 128px;
+  object-fit: cover;
+  z-index: 1;
+}
+.frame-wrapper {
+  width: 947px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 21px var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+.navigation-links-parent {
+  align-self: stretch;
+  gap: 45px;
+  max-width: 100%;
+}
+.home-wrapper,
+.navigation-links,
+.navigation-links-parent {
+  display: flex;
+  align-items: flex-start;
+}
+.navigation-links {
+  flex: 1;
+  justify-content: space-between;
+  gap: var(--gap-20);
+  max-width: 100%;
+}
+.home-wrapper {
+  flex-direction: column;
+  padding: var(--padding-1) 13px var(--padding-0) var(--padding-0);
+}
+.home {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  text-shadow: var(--text-shadow-1);
+  min-width: 76px;
+  z-index: 1;
+}
+.about-us-wrapper {
+  width: 129px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-1) var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+}
+.about-us,
+.register {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  text-shadow: var(--text-shadow-1);
+  z-index: 1;
+}
+.about-us {
+  align-self: stretch;
+}
+.register {
+  width: 129px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.contact-parent {
+  width: 243px;
+  display: flex;
+  align-items: flex-start;
+}
+.contact {
+  height: 42px;
+  flex: 1;
+  position: relative;
+  text-decoration: underline;
+  display: inline-block;
+  text-shadow: var(--text-shadow-1);
+  z-index: 1;
+}
+.contact-search {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-2) var(--padding-0) var(--padding-0);
+  margin-left: -6px;
+  position: relative;
+}
+.search2 {
+  cursor: pointer;
+  border: var(--Stroke-Border) solid var(--color-gainsboro);
+  padding: var(--Space-300) var(--Space-400);
+  background-color: var(--color-white);
+  width: 121px;
+  height: var(--height-28);
+  box-shadow: var(--shadow-drop);
+  border-radius: var(--Radius-Full);
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--Space-200);
+  min-width: 120px;
+}
+.desktop-5-inner {
+  width: 1368px;
+  justify-content: flex-end;
+  padding: var(--padding-0) 57px;
+  box-sizing: border-box;
+}
+.desktop-5-inner,
+.frame-group,
+.rectangle-group {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.frame-group {
+  flex: 1;
+  justify-content: space-between;
+  gap: var(--gap-20);
+}
+.rectangle-group {
+  cursor: pointer;
+  border: 0;
+  padding: 17px 63px 19px 64px;
+  background-color: var(--color-darkseagreen-100);
+  border-radius: var(--br-20);
+  box-sizing: border-box;
+}
+.rectangle-container:hover,
+.rectangle-group:hover {
+  background-color: var(--color-darkseagreen-200);
+}
+.contact-us,
+.frame-inner {
+  position: relative;
+  flex-shrink: 0;
+}
+.frame-inner {
+  height: 79px;
+  width: 334px;
+  border-radius: var(--br-20);
+  background-color: var(--color-darkseagreen-100);
+  display: none;
+  max-width: 100%;
+}
+.contact-us {
+  font-size: 36px;
+  font-family: var(--font-inria-serif);
+  color: var(--color-black);
+  text-align: left;
+  z-index: 1;
+}
+.rectangle-container {
+  cursor: pointer;
+  border: 0;
+  padding: 24px 5px var(--padding-16) 29px;
+  background-color: var(--color-darkseagreen-100);
+  width: 423px;
+  border-radius: var(--br-20);
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.rectangle-div,
+.were-here-to-container {
+  position: relative;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+.rectangle-div {
+  height: 79px;
+  width: 423px;
+  border-radius: var(--br-20);
+  background-color: var(--color-darkseagreen-100);
+  display: none;
+}
+.were-here-to-container {
+  flex: 1;
+  font-size: var(--fs-32);
+  color: var(--color-black);
+  text-align: left;
+  display: inline-block;
+  z-index: 1;
+}
+.b {
+  font-family: var(--font-inria-serif);
+}
+.were-here-to {
+  font-family: var(--font-inter);
+}
+.contact-block-parent {
+  align-self: stretch;
+  height: 1159px;
+  position: relative;
+  max-width: 100%;
+}
+.block-with-illustration,
+.contact-block {
+  display: flex;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.contact-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 885px;
+  align-items: center;
+  padding: var(--padding-0) var(--padding-100);
+}
+.block-with-illustration {
+  height: 726px;
+  flex: 1;
+  border-radius: 45px;
+  background-color: var(--Grey);
+  align-items: flex-start;
+  padding: var(--padding-60) 11px 80px var(--padding-100);
+  gap: 10px;
+}
+.form {
+  height: 578px;
+  width: 577px;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--fs-18);
+  color: var(--color-black);
+  font-family: var(--font-space-grotesk);
+}
+.form,
+.get-a-quote,
+.radio-buttons {
+  display: flex;
+  align-items: flex-start;
+}
+.radio-buttons {
+  flex-shrink: 0;
+}
+.get-a-quote {
+  height: var(--height-28);
+  width: 145px;
+  gap: 14px;
+}
+.radiobutton {
+  cursor: pointer;
+  margin: 0;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  border-radius: 29px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+}
+.get-a-quote-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-2) var(--padding-0) var(--padding-0);
+}
+.get-a-quote2 {
+  width: 103px;
+  height: 23px;
+  position: relative;
+  display: inline-block;
+}
+.field,
+.fields {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.fields {
+  gap: 25px;
+  flex-shrink: 0;
+  font-size: var(--fs-16);
+}
+.field {
+  gap: var(--gap-5);
+}
+.name {
+  position: relative;
+  line-height: var(--lh-28);
+}
+.input {
+  width: 468px;
+  border-radius: var(--br-14);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-16) var(--padding-30);
+}
+.name2 {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-family: var(--font-space-grotesk);
+  font-size: var(--fs-18);
+  background-color: transparent;
+  height: 23px;
+  position: relative;
+  color: var(--color-gray-100);
+  text-align: left;
+  display: inline-block;
+  min-width: 29px;
+  padding: 0;
+}
+.input2 {
+  width: 469px;
+  border-radius: var(--br-14);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-16) var(--padding-30);
+}
+.email2 {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-family: var(--font-space-grotesk);
+  font-size: var(--fs-18);
+  background-color: transparent;
+  height: 23px;
+  position: relative;
+  color: var(--color-gray-100);
+  text-align: left;
+  display: inline-block;
+  min-width: 27px;
+  padding: 0;
+}
+.field3,
+.input3 {
+  width: 471px;
+  display: flex;
+  align-items: flex-start;
+}
+.field3 {
+  height: 223px;
+  flex-direction: column;
+  gap: var(--gap-5);
+}
+.input3 {
+  height: 190px;
+  border-radius: var(--br-14);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  padding: 18px var(--padding-30);
+  font-size: var(--fs-18);
+  color: var(--color-gray-100);
+}
+.message2 {
+  position: relative;
+}
+.button {
+  cursor: pointer;
+  border: 1px solid var(--color-darkseagreen-100);
+  padding: var(--padding-20) 35px;
+  background-color: var(--color-darkseagreen-100);
+  width: 222px;
+  height: 55px;
+  box-shadow: 0 4px 4px rgba(114, 107, 107, 0.2);
+  border-radius: var(--br-20);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.label {
+  position: relative;
+  font-size: var(--fs-24);
+  line-height: var(--lh-28);
+  font-family: var(--font-space-grotesk);
+  color: var(--color-black);
+  text-align: center;
+  flex-shrink: 0;
+}
+.illustration-icon {
+  width: 542px;
+  position: relative;
+  max-height: 100%;
+  object-fit: contain;
+  max-width: 100%;
+}
+.frame-container,
+.social-row-one-parent {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.frame-container {
+  position: absolute;
+  top: 879px;
+  left: 195px;
+  width: 1145px;
+  height: 280px;
+  flex-direction: column;
+  text-align: left;
+  font-size: var(--fs-32);
+  color: var(--color-gray-200);
+  font-family: var(--font-inria-serif);
+}
+.social-row-one-parent {
+  align-self: stretch;
+  position: relative;
+  isolation: isolate;
+}
+.social-row-one {
+  height: 65px;
+  width: 328px;
+  position: absolute;
+  margin: 0 !important;
+  bottom: 60px;
+  left: 0;
+  flex-shrink: 0;
+}
+.tiktok-icon,
+.whatsapp-icon {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 257px;
+  max-height: 100%;
+  width: var(--width-71);
+  object-fit: cover;
+}
+.whatsapp-icon {
+  left: 0;
+}
+.social-row-two {
+  height: 74px;
+  width: 326px;
+  position: absolute;
+  margin: 0 !important;
+  bottom: -49px;
+  left: 2px;
+  flex-shrink: 0;
+}
+.instagram-icon,
+.twitter-icon {
+  position: absolute;
+  top: 9px;
+  left: 255px;
+  width: var(--width-71);
+  height: 65px;
+  object-fit: cover;
+}
+.instagram-icon {
+  top: 0;
+  left: 0;
+}
+.frame-div {
+  height: 231px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+.rectangle-parent2 {
+  position: absolute;
+  top: 0;
+  left: 555px;
+  border-radius: 50px;
+  background-color: var(--color-darkseagreen-100);
+  border: 1px solid var(--color-midnightblue);
+  box-sizing: border-box;
+  width: 590px;
+  height: 231px;
+  display: flex;
+  align-items: flex-start;
+  padding: 25px 90px;
+  min-height: 231px;
+  max-width: 100%;
+  z-index: 1;
+}
+.frame-child2,
+.need-help-container {
+  position: relative;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+.frame-child2 {
+  height: 231px;
+  width: 590px;
+  border-radius: 50px;
+  background-color: var(--color-darkseagreen-100);
+  border: 1px solid var(--color-midnightblue);
+  box-sizing: border-box;
+  display: none;
+}
+.need-help-container {
+  width: 391px;
+  display: inline-block;
+  z-index: 2;
+}
+.span {
+  color: var(--color-darkolivegreen);
+}
+.social-row-three {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 328px;
+  height: 65px;
+}
+.email-icon,
+.telegram-icon {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  max-height: 100%;
+  width: var(--width-71);
+  object-fit: cover;
+  z-index: 1;
+}
+.telegram-icon {
+  left: 257px;
+}
+@media screen and (max-width: 1350px) {
+  .desktop-5-inner {
+    padding-left: var(--padding-28);
+    padding-right: var(--padding-28);
+    box-sizing: border-box;
+  }
+  .contact-block-parent {
+    height: auto;
+    min-height: 1159px;
+  }
+  .contact-block {
+    height: auto;
+  }
+  .block-with-illustration {
+    height: auto;
+    flex-wrap: wrap;
+    padding-left: 50px;
+    box-sizing: border-box;
+  }
+  .form,
+  .illustration-icon {
+    flex: 1;
+  }
+}
+@media screen and (max-width: 1125px) {
+  .frame-group {
+    flex-wrap: wrap;
+  }
+  .form {
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .desktop-5 {
+    gap: 23px;
+  }
+  .frame-parent {
+    gap: 2312px;
+  }
+  .navigation-links-parent {
+    gap: 22px;
+  }
+  .contact-block {
+    padding-left: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
+  }
+  .block-with-illustration {
+    padding-left: 25px;
+    box-sizing: border-box;
+  }
+  .form {
+    gap: var(--gap-20);
+  }
+  .need-help-container {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .frame-parent {
+    gap: 1156px;
+  }
+  .contact-block,
+  .rectangle-group {
+    padding-left: var(--padding-20);
+    padding-right: var(--padding-20);
+    box-sizing: border-box;
+  }
+  .need-help-container {
+    font-size: 19px;
+  }
+}
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* Figma Variables */
+
+  /* Spacing */
+  --Radius-Full: 9999px;
+  --Space-200: 8px;
+  --Space-300: 12px;
+  --Space-400: 16px;
+  --Stroke-Border: 1px;
+
+  /* Common Style Variables */
+
+  /* Color */
+  --color-black: #000;
+  --color-darkgray: #b3b3b3;
+  --color-darkolivegreen: #285124;
+  --color-darkseagreen-100: #b7f0b1;
+  --color-darkseagreen-200: #9ed696;
+  --color-gainsboro: #d9d9d9;
+  --color-gray-100: #898989;
+  --color-gray-200: #020202;
+  --color-midnightblue: #091a72;
+  --color-white: #fff;
+  --color-whitesmoke: #ececec;
+  --Grey: #f3f3f3;
+
+  /* Gap */
+  --gap-5: 5px;
+  --gap-20: 20px;
+
+  /* Padding */
+  --padding-0: 0px;
+  --padding-1: 1px;
+  --padding-2: 2px;
+  --padding-16: 16px;
+  --padding-20: 20px;
+  --padding-28: 28px;
+  --padding-30: 30px;
+  --padding-60: 60px;
+  --padding-100: 100px;
+
+  /* BorderRadius */
+  --br-14: 14px;
+  --br-15: 15px;
+  --br-20: 20px;
+
+  /* Font */
+  --font-inria-serif: Inria Serif;
+  --font-inter: Inter;
+  --font-space-grotesk: Space Grotesk;
+
+  /* FontSize */
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-24: 24px;
+  --fs-32: 32px;
+
+  /* Shadows */
+  --shadow-drop: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --shadow-drop-1: 0px 4px 7px rgba(0, 0, 0, 0.25);
+  --text-shadow-1: 1px 0 0 rgba(0, 0, 0, 0.65), 0 1px 0 rgba(0, 0, 0, 0.65),
+    -1px 0 0 rgba(0, 0, 0, 0.65), 0 -1px 0 rgba(0, 0, 0, 0.65);
+
+  /* WidthHeights */
+  --height-16: 16px;
+  --height-28: 28px;
+  --width-16: 16px;
+  --width-71: 71px;
+
+  /* LineHeights */
+  --lh-28: 28px;
+
+  --left-0: 0px;
+  --top-0: 0px;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">
+        <img src="assets/past papers_logo.png">
+    </div>
+    <ul>
+        <li class="home-link">Home</li>
+        <li class="active">About Us</li>
+        <li class="mandate-link">Mandate</li>
+        <li class="register-link">Register</li>
+        <li class="contact-link">Contact</li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="overlay">
+        <h1>About Us</h1>
+        <p>Students waste hours searching for past papers, jumping between different websites, and still end up confused by unclear or missing answers. Studying takes time, frustrating, and inefficient.</p>
+        <p>We built this platform to fix that.</p>
+    </div>
+</section>
+
+<section class="content">
+
+    <div class="section">
+        <h2>What We Do</h2>
+        <ul>
+            <li>Access past papers by subject and year</li>
+            <li>Find clear, structured answers and explanations</li>
+            <li>Ask questions and get help when stuck</li>
+            <li>Study faster and more effectively</li>
+        </ul>
+        <p>Everything is designed to remove confusion and save time.</p>
+    </div>
+
+    <div class="section">
+        <h2>The Problem We Solve</h2>
+        <ul>
+            <li>Scattered resources across multiple sites</li>
+            <li>Lack of clear explanations</li>
+            <li>No support when stuck</li>
+            <li>Wasted time during revision</li>
+        </ul>
+        <p>This platform brings everything into one simple system.</p>
+    </div>
+
+    <div class="section">
+        <h2>Our Strengths</h2>
+        <p>To make exam preparation faster, cleaner, and accessible to every student by providing structured past papers and explanations.</p>
+    </div>
+
+    <div class="section">
+        <h2>When We Met</h2>
+        <p>Built for secondary school students preparing for national exams who want to study smarter and improve their results.</p>
+    </div>
+
+    <div class="section">
+        <h2>Our Vision</h2>
+        <ul>
+            <li>More subjects and exam content</li>
+            <li>Performance tracking tools</li>
+            <li>Mock exams and simulations</li>
+        </ul>
+        <p>We're building more than just a past papers website. Our goal is to create a smarter learning platform with:</p>
+        <ul>
+            <li>More subjects and exam content</li>
+            <li>Performance tracking tools</li>
+            <li>Mock exams and simulations</li>
+        </ul>
+        <p>A system where students don't just practice—they improve.</p>
+    </div>
+
+</section>
+  </section>
+
+  <section id="contact">
+    <div class="desktop-5">
+      <header class="frame-parent">
+        <div class="search-wrapper">
+          <div class="search">
+            <input class="value" placeholder="Search" type="text" />
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+<path d="M14 14L11.1 11.1M12.6667 7.33333C12.6667 10.2789 10.2789 12.6667 7.33333 12.6667C4.38781 12.6667 2 10.2789 2 7.33333C2 4.38781 4.38781 2 7.33333 2C10.2789 2 12.6667 4.38781 12.6667 7.33333Z" stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </div>
+        </div>
+        <div class="rectangle-parent">
+          <div class="frame-child"></div>
+          <img
+            class="frame-item"
+            loading="lazy"
+            alt=""
+            src="./public/Rectangle-8@2x.png"
+          />
+
+          <div class="frame-wrapper">
+            <div class="navigation-links-parent">
+              <div class="navigation-links">
+                <div class="home-wrapper">
+                  <h3 class="home">Home</h3>
+                </div>
+                <div class="about-us-wrapper">
+                  <h3 class="about-us">About Us</h3>
+                </div>
+                <div class="about-us-wrapper">
+                  <h3 class="about-us">Mandate</h3>
+                </div>
+                <h3 class="register">Register</h3>
+              </div>
+              <div class="contact-parent">
+                <b class="contact">Contact</b>
+                <div class="contact-search">
+                  <button class="search2">
+                    <input class="value" placeholder="Search" type="text" />
+
+                    <img class="search-icon" alt="" src="./public/Search.svg" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="desktop-5-inner">
+        <div class="frame-group">
+          <button class="rectangle-group">
+            <div class="frame-inner"></div>
+            <b class="contact-us">CONTACT US</b>
+          </button>
+          <button class="rectangle-container">
+            <div class="rectangle-div"></div>
+            <div class="were-here-to-container">
+              <b class="b">🤏🏽😊 </b>
+              <b class="were-here-to">We’re here to help!</b>
+            </div>
+          </button>
+        </div>
+      </div>
+      <main class="contact-block-parent">
+        <section class="contact-block">
+          <div class="block-with-illustration">
+            <section class="form">
+              <div class="radio-buttons">
+                <div class="get-a-quote">
+                  <input class="radiobutton" type="radio" />
+
+                  <div class="get-a-quote-wrapper">
+                    <div class="get-a-quote2">Get a Quote</div>
+                  </div>
+                </div>
+              </div>
+              <div class="fields">
+                <div class="field">
+                  <div class="name">Name</div>
+                  <div class="input">
+                    <input class="name2" placeholder="Name" type="text" />
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="name">Email*</div>
+                  <div class="input2">
+                    <input class="email2" placeholder="Email" type="text" />
+                  </div>
+                </div>
+                <div class="field3">
+                  <div class="name">Message*</div>
+                  <div class="input3">
+                    <div class="message2">Message</div>
+                  </div>
+                </div>
+              </div>
+              <button class="button">
+                <b class="label">Send Message</b>
+              </button>
+            </section>
+            <img
+              class="illustration-icon"
+              loading="lazy"
+              alt=""
+              src="./public/Illustration.svg"
+            />
+          </div>
+        </section>
+        <section class="frame-container">
+          <div class="social-row-one-parent">
+            <div class="social-row-one">
+              <img
+                class="tiktok-icon"
+                loading="lazy"
+                alt=""
+                src="assets/TikTok.png"
+              />
+
+              <img
+                class="whatsapp-icon"
+                loading="lazy"
+                alt=""
+                src="assets/Whatsapp.png"
+              />
+            </div>
+            <div class="social-row-two">
+              <img
+                class="twitter-icon"
+                loading="lazy"
+                alt=""
+                src="assets/Twitter.png"
+              />
+
+              <img
+                class="instagram-icon"
+                loading="lazy"
+                alt=""
+                src="assets/Instagram.png"
+              />
+            </div>
+            <div class="frame-div">
+              <div class="rectangle-parent2">
+                <div class="frame-child2"></div>
+                <b class="need-help-container">
+                  <span
+                    >Need help? 😊<br />
+                    Send us a message and we’ll respond quickly. We’re happy to
+                    assist you</span
+                  >
+                  <span class="span">!</span>
+                </b>
+              </div>
+              <div class="social-row-three">
+                <img
+                  class="email-icon"
+                  loading="lazy"
+                  alt=""
+                  src="assets/Email.png"
+                />
+
+                <img
+                  class="telegram-icon"
+                  loading="lazy"
+                  alt=""
+                  src="assets/Telegram.png"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <!-- paste contact.html content here -->
+  </section>
+
+  <section id="register">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #e6e6e6;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #d9d9d9;
+    border-bottom: 1px solid #bbb;
+}
+
+.logo img {
+    width: 65px;
+}
+
+.home-link {
+    stroke: black;
+    stroke-width: 9000px;
+    color: #4CAF50;
+}
+.about-link {
+    stroke: black;
+    stroke-width: 9000px;
+    color: #4CAF50;
+}
+.mandate-link {
+    stroke: black;
+    stroke-width: 65%;
+    color: #4CAF50;
+}
+.contact-link {
+    stroke: black;
+    stroke-width: 9000px;
+    color: #4CAF50;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav li {
+    color: #333;
+    cursor: pointer;
+}
+
+nav .active {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* FORM BOX */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.form-box {
+    background: #dcdcdc;
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+}
+
+.form-box h2 {
+    margin-bottom: 20px;
+}
+
+.form-box label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 20px;
+    border: none;
+    background: #eee;
+}
+
+.form-box button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #8fb174;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-box p {
+    margin-top: 10px;
+}
+
+.form-box a {
+    color: green;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">
+        <img src="assets/past papers_logo.png">
+    </div>
+
+    <ul>
+        <li class="home-link">Home</li>
+        <li class="about-link">About Us</li>
+        <li class="mandate-link">Mandate</li>
+        <li class="active">Register</li>
+        <li class="contact-link">Contact</li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="form-box">
+        <h2>sign up</h2>
+
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name..."  required>
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email..." required>
+
+        <label>Password:</label>
+        <input type="password" placeholder="Enter your Password..." required>
+
+        <button>Sign up</button>
+       
+        <p>Already have an account ? <a href="#">login</a></p>
+    </div>
+</div>
+  </section>
+    </div>
+    <section>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f3f3f3;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  background: #e6e6e6;
+}
+
+/* LEFT LOGO */
+.logo img {
+  height: 45px;
+}
+
+/* CENTER MENU */
+.menu {
+  display: flex;
+  gap: 40px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #4caf50;
+  font-weight: bold;
+  white-space: nowrap; /* prevents "About Us" from breaking */
+}
+
+/* RIGHT SEARCH */
+.search input {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+/* LOGIN SECTION */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+.card {
+  background: #dcdcdc;
+  padding: 40px;
+  width: 420px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.card h1 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: #eee;
+}
+
+button {
+  margin-top: 20px;
+  width: 55%;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: #a5d6a7;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #81c784;
+}
+
+.signup {
+  margin-top: 15px;
+}
+
+.signup a {
+  color: green;
+  text-decoration: underline;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="assets/past papers_logo.png" alt="logo">
+  </div>
+
+  <!-- MENU -->
+  <div class="menu">
+    <a href="#">Home</a>
+    <a href="#">About Us</a>
+    <a href="#">Mandate</a>
+    <a href="#">Register</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <!-- SEARCH -->
+  <div class="search">
+    <input type="text" placeholder="Search">
+  </div>
+</nav>
+
+<!-- LOGIN -->
+<div class="container">
+  <div class="card">
+    <h1>Login</h1>
+
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" placeholder="Enter your name...">
+    </div>
+
+    <div class="form-group">
+      <label>Email:</label>
+      <input type="email" placeholder="Enter your email...">
+    </div>
+
+    <div class="form-group">
+      <label>Password:</label>
+      <input type="password" placeholder="Enter your Password...">
+    </div>
+
+    <button>Login</button>
+
+    <div class="signup">
+      Don’t have an account ? <a href="#">Sign up</a>
+    </div>
+  </div>
+</div>
+
+    </section>
+
+</body>
+</html>
