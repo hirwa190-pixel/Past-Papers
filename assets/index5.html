@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">{{greetings}}</div>
+    <script>
+        Vue.createApp({
+            data(){
+                return{
+                    greetings:"Hello",
+                }
+            },
+            mounted(){
+                setTimeout(()=>{
+                    this.greetings="Hello";
+                },2000);
+                setTimeout(()=>{
+                    this.greetings="John";
+                },4000);
+                setTimeout(()=>{
+                    this.greetings="You";
+                },6000);
+                setTimeout(()=>{
+                    this.greetings="Are";
+                },8000);
+                setTimeout(()=>{
+                    this.greetings="Learning";
+                },10000);
+                setTimeout(()=>{
+                    this.greetings="Vue";
+                },12000);
+            }
+            
+        }).mount("#app")
+    </script>
+</body>
+</html>
