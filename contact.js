@@ -1,132 +1,130 @@
-import React from "react";
-import styled from "styled-components";
+export default function contactPage() {
+  return `
+    <style>
+      .contact-page {
+        font-family:Arial,sans-serif;
+        background:#f5f5f5;
+        padding:30px 40px;
+      }
+      .contact-top {
+        display:flex;
+        justify-content:space-between;
+        align-items:flex-start;
+        margin-bottom:20px;
+        flex-wrap:wrap;
+        gap:10px;
+      }
+      .contact-top h1 { font-size:20px; color:#222; margin:0; text-transform:uppercase; }
+      .contact-badge {
+        background:#b7e4c7;
+        padding:8px 16px;
+        border-radius:10px;
+        font-size:13px;
+        font-weight:bold;
+        color:#1b5e20;
+      }
+      .contact-sub { font-size:13px; color:#444; margin:0 0 20px; }
 
-const Container = styled.div`
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  padding: 40px;
-`;
+      .contact-main {
+        background:#e4e4e4;
+        border-radius:16px;
+        padding:28px;
+        display:flex;
+        gap:30px;
+        flex-wrap:wrap;
+        margin-bottom:28px;
+      }
+      .contact-form-side { flex:1; min-width:240px; }
+      .contact-form-side label { font-size:12px; color:#333; display:block; margin-bottom:4px; }
+      .radio-row { display:flex; align-items:center; gap:6px; margin-bottom:16px; font-size:13px; color:#333; }
+      .contact-form-side input[type="text"],
+      .contact-form-side input[type="email"],
+      .contact-form-side textarea {
+        width:100%; padding:9px 12px;
+        border:1px solid #ccc; border-radius:8px;
+        font-size:13px; font-family:Arial,sans-serif;
+        outline:none; margin-bottom:12px;
+        background:white; box-sizing:border-box;
+      }
+      .contact-form-side textarea { height:90px; resize:vertical; }
+      .contact-form-side button {
+        background:#95d5b2; border:none;
+        padding:10px 22px; border-radius:8px;
+        font-size:13px; font-weight:bold;
+        cursor:pointer; color:#1b5e20;
+      }
+      .contact-form-side button:hover { background:#74c69d; }
 
-const Header = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
+      .contact-illustration {
+        flex:1; min-width:160px;
+        display:flex; align-items:center; justify-content:center;
+        font-size:60px;
+      }
 
-const Title = styled.h2`
-  color: #2d6a4f;
-`;
+      .contact-info-list { display:flex; flex-direction:column; gap:12px; }
+      .contact-info-item {
+        display:flex; align-items:center; gap:12px;
+        font-size:13px; color:#333;
+      }
+      .c-icon {
+        width:32px;height:32px;
+        border-radius:6px;
+        display:flex;align-items:center;justify-content:center;
+        font-size:16px;
+      }
 
-const Badge = styled.div`
-  background: #b7e4c7;
-  padding: 10px 15px;
-  border-radius: 10px;
-  font-weight: bold;
-`;
+      @media(max-width:600px){
+        .contact-page { padding:20px; }
+        .contact-main { flex-direction:column; }
+      }
+    </style>
 
-const Text = styled.p`
-  margin: 10px 0;
-`;
+    <div class="contact-page">
 
-const FormBox = styled.div`
-  background: #eaeaea;
-  border-radius: 20px;
-  padding: 30px;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-`;
+      <div class="contact-top">
+        <h1>Contact Us</h1>
+        <div class="contact-badge">🤝 We're here to help!</div>
+      </div>
 
-const Form = styled.form`
-  width: 50%;
-`;
+      <p class="contact-sub">Need help? 😊<br>
+        Send us a message and we'll respond quickly. We're happy to assist you!</p>
 
-const Input = styled.input`
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-`;
+      <div class="contact-main">
+        <div class="contact-form-side">
+          <div class="radio-row">
+            <input type="radio" name="type" checked> Get a Quote
+          </div>
+          <label>Name*</label>
+          <input type="text" placeholder="Name">
+          <label>Email*</label>
+          <input type="email" placeholder="Email">
+          <label>Message*</label>
+          <textarea placeholder="Message"></textarea>
+          <button onclick="alert('Message sent!')">Send Message</button>
+        </div>
 
-const TextArea = styled.textarea`
-  width: 100%;
-  padding: 10px;
-  height: 100px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
-`;
+        <div class="contact-illustration">🤖</div>
+      </div>
 
-const Button = styled.button`
-  background: #95d5b2;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
+      <div class="contact-info-list">
+        <div class="contact-info-item">
+          <div class="c-icon" style="background:#fdecea;">📧</div>
+          pastpapers@yahoo.com
+        </div>
+        <div class="contact-info-item">
+          <div class="c-icon" style="background:#e8f5e9;">📞</div>
+          +250 785 765 902
+        </div>
+        <div class="contact-info-item">
+          <div class="c-icon" style="background:#f3e5f5;">✕</div>
+          @past_papers
+        </div>
+        <div class="contact-info-item">
+          <div class="c-icon" style="background:#e3f2fd;">✈️</div>
+          @past_papers
+        </div>
+      </div>
 
-  &:hover {
-    background: #74c69d;
-  }
-`;
-
-const ContactInfo = styled.div`
-  margin-top: 30px;
-`;
-
-const InfoItem = styled.div`
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-`;
-
-const Illustration = styled.div`
-  width: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-`;
-
-function Contact() {
-  return (
-    <Container>
-      <Header>
-        <Title>CONTACT US</Title>
-        <Badge>🤏🏽😊 We're here to help!</Badge>
-      </Header>
-
-      <Text>Need help? 😊</Text>
-      <Text>
-        Send us a message and we’ll respond quickly. We’re happy to assist you!
-      </Text>
-
-      <FormBox>
-        <Form>
-          <label>
-            <input type="radio" /> Get a Quote
-          </label>
-
-          <Input type="text" placeholder="Name" />
-          <Input type="email" placeholder="Email" />
-          <TextArea placeholder="Message" />
-
-          <Button>Send Message</Button>
-        </Form>
-
-        <Illustration><img src="assets/p.png"></img></Illustration>
-      </FormBox>
-
-      <ContactInfo>
-        <InfoItem><img src="assets/e.png"></img> pastpapers@yahoo.com</InfoItem>
-        <InfoItem><img src="assets/w.png"></img> +250 785 765 902</InfoItem>
-        <InfoItem><img src="assets/x.png"></img> @past_papers</InfoItem>
-        <InfoItem><img src="assets/t.png"></img> @past_papers</InfoItem>
-      </ContactInfo>
-    </Container>
-  );
+    </div>
+  `;
 }
-
-export default Contact;

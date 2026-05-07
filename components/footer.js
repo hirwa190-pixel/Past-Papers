@@ -1,93 +1,52 @@
-import React from "react";
-
-const Footer = () => {
-  const styles = {
-    footer: {
-      backgroundColor: "#0b4d0b", // dark green
-      color: "#d4f5d4",
-      padding: "40px",
-      display: "flex",
-      justifyContent: "space-between",
-      flexWrap: "wrap",
-      fontFamily: "Arial, sans-serif"
-    },
-
-    column: {
-      width: "45%",
-      minWidth: "250px"
-    },
-
-    title: {
-      fontSize: "22px",
-      fontWeight: "bold",
-      marginBottom: "15px"
-    },
-
-    list: {
-      listStyle: "disc",
-      paddingLeft: "20px"
-    },
-
-    link: {
-      color: "#d4f5d4",
-      textDecoration: "underline",
-      marginBottom: "6px",
-      cursor: "pointer"
-    },
-
-    contactText: {
-      marginBottom: "10px",
-      fontWeight: "bold"
-    },
-
-    icons: {
-      display: "flex",
-      gap: "15px",
-      marginTop: "15px",
-      fontSize: "20px",
-      cursor: "pointer"
-    }
-  };
-
-  return (
-    <div style={styles.footer}>
-
-      {/* LEFT SIDE */}
-      <div style={styles.column}>
-        <div style={styles.title}>Useful links</div>
-
-        <ul style={styles.list}>
-          <li style={styles.link}>Mineduc</li>
-          <li style={styles.link}>REB</li>
-          <li style={styles.link}>Rwanda Polytechnic</li>
-          <li style={styles.link}>Webmail</li>
-          <li style={styles.link}>TVET Digitalization</li>
-          <li style={styles.link}>E-Learning</li>
-          <li style={styles.link}>TVET Management Portal</li>
-          <li style={styles.link}>TVET Schools MAP</li>
-          <li style={styles.link}>MINEDUC</li>
-          <li style={styles.link}>Rwanda Coding Academy</li>
-          <li style={styles.link}>Rwanda School of Creative Arts and Music</li>
-          <li style={styles.link}>University of Rwanda</li>
-          <li style={styles.link}>Rwanda Education Board (REB)</li>
+export default function footer() {
+  return `
+    <div style="
+      background:#0b4d0b; color:#9fd97a;
+      padding:36px 50px; display:flex;
+      justify-content:space-between; flex-wrap:wrap;
+      gap:30px; font-family:Arial,sans-serif;
+    ">
+      <div style="flex:1;min-width:240px;">
+        <h3 style="color:#9fd97a;font-size:22px;font-weight:bold;margin:0 0 18px;">Useful links</h3>
+        <ul style="list-style:disc;padding-left:18px;line-height:2;margin:0;">
+          <li><a href="#" style="color:#9fd97a;text-decoration:none;">Mineduc</a></li>
+          <li><a href="#" style="color:#9fd97a;text-decoration:none;">REB</a></li>
+          <li><a href="#" style="color:#9fd97a;text-decoration:none;">Rwanda Polytechnic</a></li>
+          <li><a href="#" style="color:#9fd97a;text-decoration:none;">Webmail</a></li>
+          <li><a href="#" style="color:#9fd97a;text-decoration:none;">TVET Digitalization</a></li>
+          <li><a href="#" style="color:#9fd97a;text-decoration:none;">E-Learning</a></li>
+          <li><a href="#" style="color:#9fd97a;text-decoration:none;">TVET Management Portal</a></li>
+          <li><a href="#" style="color:#9fd97a;text-decoration:none;">TVET Schools MAP</a></li>
+          <li><a href="#" style="color:#9fd97a;text-decoration:none;">MINEDUC</a></li>
+          <li><a href="#" style="color:#9fd97a;text-decoration:none;">Rwanda Coding Academy</a></li>
+          <li><a href="#" style="color:#9fd97a;text-decoration:none;">Rwanda School of Creative Arts and Music</a></li>
+          <li><a href="#" style="color:#9fd97a;text-decoration:none;">Rwanda Polytechnic</a></li>
+          <li><a href="#" style="color:#9fd97a;text-decoration:none;">University of Rwanda</a></li>
+          <li><a href="#" style="color:#9fd97a;text-decoration:none;">Rwanda Education Board (REB)</a></li>
         </ul>
       </div>
 
-      {/* RIGHT SIDE */}
-      <div style={styles.column}>
-        <div style={styles.title}>Contact Us</div>
-
-        <div style={styles.contactText}>pastpapers@yahoo.com</div>
-        <div style={styles.contactText}>07899875456</div>
-
-        <div style={styles.icons}>
-  <img src="assets/inst.png" alt="icon" style={{ width: "22px" }} />
-  <img src="assets/x.png" alt="icon" style={{ width: "22px" }} />
-</div>
+      <div style="min-width:200px;">
+        <h3 style="color:#9fd97a;font-size:22px;font-weight:bold;margin:0 0 18px;">Contact Us</h3>
+        <p style="margin:0 0 12px;font-size:15px;font-weight:bold;">pastpapers@yahoo.com</p>
+        <p style="margin:0 0 24px;font-size:15px;font-weight:bold;">07899875456</p>
+        <div style="display:flex;gap:14px;align-items:center;">
+          <a href="#" style="
+            width:36px;height:36px;border:2px solid #9fd97a;border-radius:50%;
+            display:flex;align-items:center;justify-content:center;
+            font-size:16px;text-decoration:none;
+          ">📷</a>
+          <a href="#" style="
+            width:36px;height:36px;border:2px solid #9fd97a;border-radius:50%;
+            background:#2a6b2a;
+            display:flex;align-items:center;justify-content:center;
+            font-size:14px;text-decoration:none;color:#9fd97a;font-weight:bold;
+          ">✕</a>
+        </div>
       </div>
-
     </div>
-  );
-};
-
-export default Footer;
+    <div style="background:#073d07;color:#9fd97a;text-align:center;padding:10px;font-size:12px;font-family:Arial,sans-serif;">
+      © ${new Date().getFullYear()} Past Papers. All rights reserved.
+    </div>
+  `;
+}
