@@ -1,79 +1,59 @@
-import React from "react";
+export default function navbar(activePage = "home") {
+  const links = [
+    { label: "Home",       page: "home" },
+    { label: "About Us",   page: "about" },
+    { label: "Mandate",    page: "mandate" },
+    { label: "Register",   page: "registration" },
+    { label: "Contact",    page: "contact" },
+  ];
 
-const Navbar = () => {
-  const styles = {
-    navbar: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      padding: "10px 20px",
-      backgroundColor: "#f5f5f5",
-      borderBottom: "1px solid #ccc",
-      fontFamily: "Arial, sans-serif"
-    },
+  const linkHTML = links.map(l => `
+    <span onclick="showPage('${l.page}')" style="
+      cursor:pointer;
+      font-size:13px;
+      font-weight:${activePage === l.page ? 'bold' : 'normal'};
+      color:#3a7d3a;
+      text-decoration:${activePage === l.page ? 'underline' : 'none'};
+      white-space:nowrap;
+    ">${l.label}</span>
+  `).join("");
 
-    logo: {
-      display: "flex",
-      alignItems: "center",
-      gap: "8px",
-      fontWeight: "bold",
-      color: "green"
-    },
-
-    links: {
-      display: "flex",
-      gap: "20px",
-      color: "green",
-      fontWeight: "500",
-      cursor: "pointer"
-    },
-
-    rightSection: {
-      display: "flex",
-      alignItems: "center",
-      gap: "10px"
-    },
-
-    searchBox: {
-      padding: "6px 10px",
-      borderRadius: "15px",
-      border: "1px solid #ccc",
-      outline: "none"
-    },
-
-    menuIcon: {
-      fontSize: "20px",
-      cursor: "pointer"
-    }
-  };
-
-  return (
-    <div style={styles.navbar}>
-      
-      {/* Logo */}
-      <div style={styles.logo}>
-        
-      <img src="assets/past papers_logo.png" alt="logo"  />
-      <span>PAST PAPERS</span>
+  return `
+    <nav style="
+      display:flex; align-items:center; justify-content:space-between;
+      padding:6px 16px; background:#f2f2f2;
+      border-bottom:1px solid #ccc; font-family:Arial,sans-serif;
+      position:sticky; top:0; z-index:1000;
+    ">
+      <div style="display:flex;align-items:center;gap:6px;min-width:60px;">
+        <div style="
+          width:42px;height:42px;
+          border:2px solid #5aac5a;
+          border-radius:6px;
+          background:#e8f5e9;
+          display:flex;align-items:center;justify-content:center;
+          font-size:20px;
+        ">📋</div>
+        <div style="font-size:8px;font-weight:bold;color:#2e7d32;line-height:1.3;">PAST<br>PAPERS</div>
       </div>
 
-      {/* Links */}
-      <div style={styles.links}>
-        <span>Home</span>
-        <span>About Us</span>
-        <span>Categories</span>
-        <span>Register</span>
-        <span>Contact</span>
+      <div style="display:flex;gap:22px;align-items:center;">
+        ${linkHTML}
       </div>
 
-      {/* Right Section */}
-      <div style={styles.rightSection}>
-        <input type="text" placeholder="Search" style={styles.searchBox} />
-        <span style={styles.menuIcon}>☰</span>
+      <div style="
+        display:flex;align-items:center;
+        border:1px solid #bbb;border-radius:4px;
+        background:white;overflow:hidden;min-width:150px;
+      ">
+        <span style="padding:6px 8px;font-size:13px;color:#777;border-right:1px solid #ddd;">☰</span>
+        <input type="text" placeholder="Search" style="
+          border:none;outline:none;padding:6px 8px;
+          font-size:13px;flex:1;background:white;
+          font-family:Arial,sans-serif;
+        ">
+        <span style="padding:6px 8px;font-size:13px;color:#777;border-left:1px solid #ddd;">🔍</span>
       </div>
-
-    </div>
-  );
-};
-
-export default Navbar;
+    </nav>
+  `;
+}

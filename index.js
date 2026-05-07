@@ -1,56 +1,28 @@
-import  aboutPage  from "./aboutPage.js";
-import registerPage from "./Registration.js";
+import homePage from "./homePage.js";
+import aboutPage from "./aboutPage.js";
+import registrationPage from "./Registration.js";
+import mandatePage from "./mandate.js";
+import navbar from "./components/Header.js";
+import footer from "./components/Footer.js";
+import contactPage from "./contact.js";
 
 const app = document.getElementById("app");
 
-
-const style = document.createElement("style");
-style.textContent = `
-body { font-family: Arial; background: #f3f3f3; }
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  padding: 15px;
-  background: #ddd;
-}
-
-.card, .form-box {
-  background: #dcdcdc;
-  padding: 30px;
-  border-radius: 20px;
-  width: 400px;
-  margin: 50px auto;
-  text-align: center;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 20px;
-  border: none;
-}
-
-button {
-  padding: 10px;
-  border-radius: 20px;
-  border: none;
-  background: #8fb174;
-}
-`;
-document.head.appendChild(style);
-
-
 window.showPage = function(page) {
-  if (page === "home") {
-    app.innerHTML = "<h1 style='text-align:center'>Welcome</h1>";
-    console.log("home clicked");
+  let content = "";
+  if (page === "home")         content = homePage();
+  else if (page === "about")   content = aboutPage();
+  else if (page === "mandate") content = mandatePage();
+  else if (page === "registration") content = registrationPage();
+  else if (page === "contact") content = contactPage();
+
+  app.innerHTML = navbar(page) + content + footer();
+
+  if (page === "registration") {
+    setTimeout(() => { if (window.showSignup) showSignup(); }, 0);
   }
-  else if (page === "about") {
-    app.innerHTML = aboutPage();
-  }
-  else if (page === "register") {
-    app.innerHTML = registerPage();
-  }
+
+  window.scrollTo(0, 0);
 };
+
+showPage("home");

@@ -1,23 +1,28 @@
-import loginForm  from "./login.js";
-import  signupForm  from "./signup.js";
+import { loginForm } from "./login.js";
+import { signupForm } from "./signup.js";
 
-export function registerPage() {
+export default function registrationPage() {
   return `
-    <div id="auth"></div>
+    <div style="
+      min-height:500px;
+      background:#f0f0f0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:50px 20px;
+      font-family:Arial,sans-serif;
+    ">
+      <div id="auth"></div>
+    </div>
   `;
 }
 
 window.showLogin = function() {
-  document.getElementById("auth").innerHTML = loginForm();
+  const auth = document.getElementById("auth");
+  if (auth) auth.innerHTML = loginForm();
 };
 
 window.showSignup = function() {
-  document.getElementById("auth").innerHTML = signupForm();
+  const auth = document.getElementById("auth");
+  if (auth) auth.innerHTML = signupForm();
 };
-
-
-setTimeout(() => {
-  if (document.getElementById("auth")) {
-    showLogin();
-  }
-}, 0);
