@@ -35,7 +35,7 @@ export default function footer() {
             width:36px;height:36px;border:2px solid #9fd97a;border-radius:50%;
             display:flex;align-items:center;justify-content:center;
             font-size:16px;text-decoration:none;
-          ">📷</a>
+          "><img src="assets/inst.png" width=20 height=20></a>
           <a href="#" style="
             width:36px;height:36px;border:2px solid #9fd97a;border-radius:50%;
             background:#2a6b2a;

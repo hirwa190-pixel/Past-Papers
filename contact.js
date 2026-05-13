@@ -103,24 +103,24 @@ export default function contactPage() {
           <button onclick="alert('Message sent!')">Send Message</button>
         </div>
 
-        <div class="contact-illustration">🤖</div>
+        <div class="contact-illustration"><img src="assets/p.png" width=400 height=400></div>
       </div>
 
       <div class="contact-info-list">
         <div class="contact-info-item">
-          <div class="c-icon" style="background:#fdecea;">📧</div>
+          <div class="c-icon" style="background:#fdecea;"><img src="assets/mail.png" width=20 height=20></div>
           pastpapers@yahoo.com
         </div>
         <div class="contact-info-item">
-          <div class="c-icon" style="background:#e8f5e9;">📞</div>
+          <div class="c-icon" style="background:#e8f5e9;"><img src="assets/p.png" width=20 height=20></div>
           +250 785 765 902
         </div>
         <div class="contact-info-item">
-          <div class="c-icon" style="background:#f3e5f5;">✕</div>
+          <div class="c-icon" style="background:#f3e5f5;"><img src="assets/.png" width=400 height=400></div>
           @past_papers
         </div>
         <div class="contact-info-item">
-          <div class="c-icon" style="background:#e3f2fd;">✈️</div>
+          <div class="c-icon" style="background:#e3f2fd;"><img src="assets/p.png" width=400 height=400></div>
           @past_papers
         </div>
       </div>
